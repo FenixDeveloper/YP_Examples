@@ -36,18 +36,16 @@
             border: 15px solid red;
             padding: 15%;
             --r: 1deg;
-            transform: rotateX(var(--r));
             animation: r 5s linear infinite;
         }
 
         *:after {
             border-color: #080;
-            --r: -1deg;
         }
 
         @keyframes r {
             to {
-                transform: rotateX(var(--r)) rotate(360deg);
+                transform: rotate(360deg);
             }
         }
     </style>
