@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3: Chain rotation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .box {
+            width: 280px;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Inconsolata", monospace;
+            font-size: 28px;
+            border: 1px solid #c39f76;
+            box-sizing: border-box;
+        }
+
+        html:before, html:after, body:before, body:after {
+            display: none !important;
+        }
+
+        * {
+            transform-style: preserve-3d;
+        }
+
+        *:before, *:after {
+            content: '';
+            margin: -7.5%;
+            border: 15px solid red;
+            padding: 15%;
+            --r: 1deg;
+            transform: rotateX(var(--r));
+            animation: r 5s linear infinite;
+        }
+
+        *:after {
+            border-color: #080;
+            --r: -1deg;
+        }
+
+        @keyframes r {
+            to {
+                transform: rotateX(var(--r)) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <img src="./chain-rotation.gif" />
+</body>
+</html>
