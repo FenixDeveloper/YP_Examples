@@ -1,0 +1,142 @@
+<picture {{#if lazy}}class="lazy"{{/if}} class="{{class}} {{#if style}}image is-{{style}}{{/if}}">
+    {{#if source}}
+        {{#if lazy}}
+            {{#if webp}}
+                {{#if scale}}
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-l.webp{{#if retina}} 1x, {{source}}-l@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 1200px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-m.webp{{#if retina}} 1x, {{source}}-m@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 700px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-s.webp{{#if retina}} 1x, {{source}}-s@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 300px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-lp.webp{{#if retina}} 1x, {{source}}-lp@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 1200px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-mp.webp{{#if retina}} 1x, {{source}}-mp@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 700px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-sp.webp{{#if retina}} 1x, {{source}}-sp@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 300px){{#if orientation}} and (orientation: portrait){{/if}}">
+                    {{/if}}
+                {{else}}
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}.webp{{#if retina}} 1x, {{source}}@2x.webp 2x{{/if}}" type="image/webp" media="{{#if orientation}}(orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-p.webp{{#if retina}} 1x, {{source}}-p@2x.webp 2x{{/if}}" type="image/webp" media="{{#if orientation}}(orientation: portrait){{/if}}">
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            {{#if jpeg}}
+                {{#if scale}}
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-l.jpg{{#if retina}} 1x, {{source}}-l@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 1200px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-m.jpg{{#if retina}} 1x, {{source}}-m@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 700px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-s.jpg{{#if retina}} 1x, {{source}}-s@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 300px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-lp.jpg{{#if retina}} 1x, {{source}}-lp@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 1200px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-mp.jpg{{#if retina}} 1x, {{source}}-mp@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 700px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-sp.jpg{{#if retina}} 1x, {{source}}-sp@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 300px){{#if orientation}} and (orientation: portrait){{/if}}">
+                    {{/if}}
+                {{else}}
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}.jpg{{#if retina}} 1x, {{source}}@2x.jpg 2x{{/if}}" type="image/jpeg" media="{{#if orientation}}(orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-p.jpg{{#if retina}} 1x, {{source}}-p@2x.jpg 2x{{/if}}" type="image/jpeg" media="{{#if orientation}}(orientation: portrait){{/if}}">
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            {{#if png}}
+                {{#if scale}}
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-l.png{{#if retina}} 1x, {{source}}-l@2x.png 2x{{/if}}" type="image/png" media="(min-width: 1200px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-m.png{{#if retina}} 1x, {{source}}-m@2x.png 2x{{/if}}" type="image/png" media="(min-width: 700px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-s.png{{#if retina}} 1x, {{source}}-s@2x.png 2x{{/if}}" type="image/png" media="(min-width: 300px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-lp.png{{#if retina}} 1x, {{source}}-lp@2x.png 2x{{/if}}" type="image/png" media="(min-width: 1200px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-mp.png{{#if retina}} 1x, {{source}}-mp@2x.png 2x{{/if}}" type="image/png" media="(min-width: 700px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-sp.png{{#if retina}} 1x, {{source}}-sp@2x.png 2x{{/if}}" type="image/png" media="(min-width: 300px){{#if orientation}} and (orientation: portrait){{/if}}">
+                    {{/if}}
+                {{else}}
+                    <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}.png{{#if retina}} 1x, {{source}}@2x.png 2x{{/if}}" type="image/png" media="{{#if orientation}}(orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{source}}-p.png{{#if retina}} 1x, {{source}}-p@2x.png 2x{{/if}}" type="image/png" media="{{#if orientation}}(orientation: portrait){{/if}}">
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            <img {{#if placeholder}}src="{{placeholder}}"{{/if}} data-src="{{source}}.{{fallback}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+            <noscript>
+                <img src="{{source}}.{{fallback}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+            </noscript>
+        {{else}}
+            {{#if webp}}
+                {{#if scale}}
+                    <source srcset="{{source}}-l.webp{{#if retina}} 1x, {{source}}-l@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 1200px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source srcset="{{source}}-m.webp{{#if retina}} 1x, {{source}}-m@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 700px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source srcset="{{source}}-s.webp{{#if retina}} 1x, {{source}}-s@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 300px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source srcset="{{source}}-lp.webp{{#if retina}} 1x, {{source}}-lp@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 1200px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source srcset="{{source}}-mp.webp{{#if retina}} 1x, {{source}}-mp@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 700px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source srcset="{{source}}-sp.webp{{#if retina}} 1x, {{source}}-sp@2x.webp 2x{{/if}}" type="image/webp" media="(min-width: 300px){{#if orientation}} and (orientation: portrait){{/if}}">
+                    {{/if}}
+                {{else}}
+                    <source srcset="{{source}}.webp{{#if retina}} 1x, {{source}}@2x.webp 2x{{/if}}" type="image/webp" media="{{#if orientation}}(orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source srcset="{{source}}-p.webp{{#if retina}} 1x, {{source}}@2x.webp 2x{{/if}}" type="image/webp" media="{{#if orientation}}(orientation: portrait){{/if}}">
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            {{#if jpeg}}
+                {{#if scale}}
+                    <source srcset="{{source}}-l.jpg{{#if retina}} 1x, {{source}}-l@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 1200px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source srcset="{{source}}-m.jpg{{#if retina}} 1x, {{source}}-m@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 700px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source srcset="{{source}}-s.jpg{{#if retina}} 1x, {{source}}-s@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 300px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source srcset="{{source}}-lp.jpg{{#if retina}} 1x, {{source}}-lp@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 1200px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source srcset="{{source}}-mp.jpg{{#if retina}} 1x, {{source}}-mp@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 700px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source srcset="{{source}}-sp.jpg{{#if retina}} 1x, {{source}}-sp@2x.jpg 2x{{/if}}" type="image/jpeg" media="(min-width: 300px){{#if orientation}} and (orientation: portrait){{/if}}">
+                    {{/if}}
+                {{else}}
+                    <source srcset="{{source}}.jpg{{#if retina}} 1x, {{source}}@2x.jpg 2x{{/if}}" type="image/jpeg" media="{{#if orientation}}(orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source srcset="{{source}}-p.jpg{{#if retina}} 1x, {{source}}@2x.jpg 2x{{/if}}" type="image/jpeg" media="{{#if orientation}}(orientation: portrait){{/if}}">
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            {{#if png}}
+                {{#if scale}}
+                    <source srcset="{{source}}-l.png{{#if retina}} 1x, {{source}}-l@2x.png 2x{{/if}}" type="image/png" media="(min-width: 1200px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source srcset="{{source}}-m.png{{#if retina}} 1x, {{source}}-m@2x.png 2x{{/if}}" type="image/png" media="(min-width: 700px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    <source srcset="{{source}}-s.png{{#if retina}} 1x, {{source}}-s@2x.png 2x{{/if}}" type="image/png" media="(min-width: 300px){{#if orientation}} and (orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source srcset="{{source}}-lp.png{{#if retina}} 1x, {{source}}-lp@2x.png 2x{{/if}}" type="image/png" media="(min-width: 1200px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source srcset="{{source}}-mp.png{{#if retina}} 1x, {{source}}-mp@2x.png 2x{{/if}}" type="image/png" media="(min-width: 700px){{#if orientation}} and (orientation: portrait){{/if}}">
+                        <source srcset="{{source}}-sp.png{{#if retina}} 1x, {{source}}-sp@2x.png 2x{{/if}}" type="image/png" media="(min-width: 300px){{#if orientation}} and (orientation: portrait){{/if}}">
+                    {{/if}}
+                {{else}}
+                    <source srcset="{{source}}.png{{#if retina}} 1x, {{source}}@2x.png 2x{{/if}}" type="image/png" media="{{#if orientation}}(orientation: landscape){{/if}}">
+                    {{#if orientation}}
+                        <source srcset="{{source}}-p.png{{#if retina}} 1x, {{source}}@2x.png 2x{{/if}}" type="image/png" media="{{#if orientation}}(orientation: portrait){{/if}}">
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+
+            <img src="{{source}}.{{fallback}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+        {{/if}}
+    {{/if}}
+
+    {{#if src}}
+        {{#if lazy}}
+            <img {{#if placeholder}}src="{{placeholder}}"{{/if}} data-src="{{src}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+            <noscript>
+                <img src="{{src}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+            </noscript>
+        {{else}}
+            <img src="{{src}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+        {{/if}}
+    {{/if}}
+
+    {{#if srcset}}
+        {{#if lazy}}
+            <img {{#if placeholder}}srcset="{{placeholder}}"{{/if}} data-srcset="{{srcset}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+            <noscript>
+                <img srcset="{{srcset}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+            </noscript>
+        {{else}}
+            <img srcset="{{srcset}}" alt="{{text}}" {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}} />
+        {{/if}}
+    {{/if}}
+</picture>

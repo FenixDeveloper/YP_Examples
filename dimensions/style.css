@@ -1,0 +1,258 @@
+html, body {
+    height: 100%;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /*zoom: 1.25;*/
+}
+
+article {
+    border-bottom: 3px solid gray;
+    padding: 2rem  1rem;
+}
+
+article h2 {
+    margin: 0 0 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* SIZES */
+.sizes section {
+    padding: 1.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    gap: 8px;
+}
+
+.sizes section div {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(0,255,0, 0.4);
+    font-weight: bold;
+}
+
+.font-large {
+    font-size: 16px;
+}
+
+.size-pixel {
+    width: 250px;
+}
+
+.size-cm {
+    width: 5cm;
+}
+
+.size-mm {
+    width: 50mm;
+}
+
+.size-rem {
+    width: 25rem;
+}
+
+.size-em {
+    width: 25em;
+}
+
+.size-percent {
+    width: 25%;
+}
+
+.size-vw {
+    width: 25vw;
+}
+
+.size-vh {
+    width: 25vh;
+}
+
+.size-vmin {
+    width: 25vmin;
+}
+
+.size-vmax {
+    width: 25vmax;
+}
+
+/* CARDS */
+.cards section {
+    padding: 16px 32px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cards section > div {
+    background-color: white;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.cards section > div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    /*width: 90vw;*/
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    min-width: 30rem;
+}
+
+.card > div {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: min-content;
+}
+
+.card-image {
+    min-width: 10rem;
+}
+
+.card-title {
+    min-width: 25rem;
+    padding: 1em 2em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card-title h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.card-title p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.card-description {
+    min-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.card-description p {
+    margin: 0;
+}
+
+.card-price {
+    min-width: 15rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.card-price span, .card-price button {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
+    margin: 0;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+.card-price button {
+    border-color: gray;
+    border-radius: 0.25em;
+}
+
+.hero {
+    background-image: url("./1.jpg");
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+
+.hero .lead {
+    width: 80vw;
+    padding: 0 5vw;
+}
+
+.hero .form {
+    width: 20vw;
+    height: 80vh;
+    background-color: rgba(0,0,0,0.4);
+    padding: 0 2vw;
+    color: white;
+    font-size: 3vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    justify-content: center;
+}
+
+.lead h1 {
+    margin: 0;
+    font-size: 12vh;
+}
+
+.lead p {
+    margin: 0;
+    font-size: 6vh;
+}
+
+.form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field input {
+    font-size: 1.5vh;
+    line-height: 3vh;
+}
+
+.field label {
+    font-size: 2vh;
+}
+
+.field input[type=submit] {
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+
+/* ORIENTATION */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5vmax;
+}
+
+main img {
+    object-fit: cover;
+}
+
+main .stable img {
+    width: 40vmax;
+    height: 30vmin;
+}
+
+main .flex img {
+    width: 40vw;
+    height: 30vh;
+}

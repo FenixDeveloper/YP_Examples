@@ -1,0 +1,41 @@
+@import "./css/Glyphter.css";
+
+html, body {
+    height: 100%;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.images {
+    display: flex;
+    gap: 1vw;
+    padding: 5vw;
+    justify-content: center;
+}
+
+.images > div {
+}
+
+.images img {
+    display: block;
+    width: 40vw;
+}
+
+.three img {
+    width: 30vw;
+}
+
+.svg i {
+    font-size: 30vw;
+    color: red;
+}
+
+.svg svg {
+    width: 30vw;
+}
+
+.svg svg > path {
+    fill: green;
+}

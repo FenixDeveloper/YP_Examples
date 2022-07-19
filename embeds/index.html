@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="images">
+        <div>
+            <img src="https://placehold.co/400" alt="simple src" />
+        </div>
+        <div>
+            <img srcset="https://placehold.co/500.jpg 500w,
+                         https://placehold.co/800.jpg 800w,
+                         https://placehold.co/1200.jpg 1200w"
+                 sizes="(max-width: 600px) 500px,
+                        (max-width: 900px) 800px,
+                        1200px"
+                 src="https://placehold.co/800.jpg" alt="flexible srcset">
+        </div>
+    </section>
+    <section class="images three">
+        <div>
+            <img src="https://placehold.co/400.jpg?text=400" alt="simple src" />
+        </div>
+        <div>
+            <img srcset="https://placehold.co/400.jpg?text=400 1x,
+                         https://placehold.co/800.jpg?text=800 2x,
+                         https://placehold.co/800.jpg?text=1200 3x"
+                 src="https://placehold.co/800.jpg?text=800" alt="flexible srcset">
+        </div>
+        <div>
+            <picture>
+                <source media="(max-width: 600px)"
+                        srcset="https://placehold.co/200.jpg?text=p200 1x,
+                                https://placehold.co/400.jpg?text=p400 2x" >
+                <source media="(max-width: 800px)"
+                        srcset="https://placehold.co/400.jpg?text=p400 1x,
+                                https://placehold.co/800.jpg?text=p800 2x" >
+                <source srcset="https://placehold.co/1200.jpg?text=p1200 1x,
+                                https://placehold.co/2400.jpg?text=p2400 2x" >
+                <img src="https://placehold.co/800.jpg?text=p800" alt="placeholder image" />
+            </picture>
+        </div>
+    </section>
+    <section class="images three svg">
+        <div>
+            <img src="icons/envelope.svg" />
+        </div>
+        <div>
+            <i class="icon-envelope"></i>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
+        </div>
+    </section>
+</body>
+</html>
