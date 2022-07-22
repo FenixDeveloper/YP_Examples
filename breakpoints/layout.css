@@ -43,8 +43,13 @@ section, nav {
 header {
     background-color: #C5E1A5;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
+}
+
+header > * {
+    height: 50px;
+    box-sizing: border-box;
 }
 
 header .logo {
@@ -72,7 +77,7 @@ header .menu {
     justify-content: center;
     gap: 16px;
     align-items: center;
-    padding: 16px 32px;
+    padding: 0 32px;
 }
 
 header .social {
@@ -80,12 +85,15 @@ header .social {
     gap: 16px;
     justify-content: flex-end;
     align-items: center;
-    padding: 5px 0;
+}
+
+.social a {
+    display: block;
 }
 
 .social img {
+    display: block;
     border-radius: 50px;
-    height: 40px;
 }
 
 nav a {
@@ -188,6 +196,8 @@ main .gallery {
         flex-direction: column;
         order: 0;
         display: none;
+        height: fit-content;
+        padding: 16px 0;
     }
     header .social {
         width: 100%;
