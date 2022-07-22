@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breakpoints</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Breakpoints — how it works</h1>
+        <article>
+            <h2>@media min-width</h2>
+            <section class="row break-min">
+                <div class="item point-300">300</div>
+                <div class="item point-600">600</div>
+                <div class="item point-900">900</div>
+            </section>
+        </article>
+        <article>
+            <h2>@media max-width</h2>
+            <section class="row break-max">
+                <div class="item point-300">300</div>
+                <div class="item point-600">600</div>
+                <div class="item point-900">900</div>
+            </section>
+        </article>
+        <article>
+            <h2>@media min-width and max-width</h2>
+            <section class="row break-both">
+                <div class="item point-300">300</div>
+                <div class="item point-600">600</div>
+                <div class="item point-900">900</div>
+            </section>
+        </article>
+        <article>
+            <h2>@media orientation</h2>
+            <section class="row break-orientation">
+                <div class="item portrait">portrait</div>
+                <div class="item square">square</div>
+                <div class="item landscape">landscape</div>
+            </section>
+        </article>
+
+        <article>
+            <h2>@media aspect-ratio</h2>
+            <section class="row break-ratio">
+                <div class="item r1-1">1/1</div>
+                <div class="item r3-2">3/2</div>
+                <div class="item r4-3">4/3</div>
+                <div class="item r16-9">16/9</div>
+            </section>
+        </article>
+
+        <article>
+            <h2>@media resolution</h2>
+            <section class="row break-resolution">
+                <div class="item r1">72-144 (1x)</div>
+                <div class="item r2">144-240 (2x)</div>
+                <div class="item r3">240-336 (3x)</div>
+                <div class="item r4">336-384 (4x)</div>
+            </section>
+        </article>
+    </div>
+</body>
+</html>

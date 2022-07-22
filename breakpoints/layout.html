@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <a class="logo" href="#">
+            <img src="https://placehold.co/200x50/ffffff/000000.svg?text=logo&font=roboto" alt="logo" />
+        </a>
+        <div id="menu-button" class="menu-button"></div>
+        <nav class="menu collapsable">
+            <a href="">About</a>
+            <a href="">Examples</a>
+            <a href="">Contacts</a>
+            <a href="">Catalog</a>
+            <a href="">Rules</a>
+        </nav>
+        <nav class="social collapsable">
+            <a href="#"><img src="https://placehold.co/50/ffffff/000000.svg?text=vk" alt="vk" /></a>
+            <a href="#"><img src="https://placehold.co/50/ffffff/000000.svg?text=ok" alt="ok" /></a>
+        </nav>
+    </header>
+    <div class="content">
+        <main>
+            <h1>main</h1>
+            <section class="gallery">
+                <article>
+                    <h2>Image 1</h2>
+                    <img srcset="https://placehold.co/300x300.jpg?text=300 1x, https://placehold.co/300x300@2x.jpg?text=600 2x" alt="image 1">
+                </article>
+                <article>
+                    <h2>Image 2</h2>
+                    <img srcset="https://placehold.co/300x300.jpg?text=300 1x, https://placehold.co/300x300@2x.jpg?text=600 2x" alt="image 1">
+                </article>
+                <article>
+                    <h2>Image 3</h2>
+                    <img srcset="https://placehold.co/300x300.jpg?text=300 1x, https://placehold.co/300x300@2x.jpg?text=600 2x" alt="image 1">
+                </article>
+            </section>
+            <section class="description">
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut commodi corporis est facilis
+                    iusto molestiae neque nihil, odio omnis perferendis repudiandae sapiente unde, ut?</p>
+            </section>
+        </main>
+        <aside>aside</aside>
+    </div>
+    <footer>footer</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
