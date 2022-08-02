@@ -1,0 +1,166 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    --bg: #AED581;
+    --st: #E57373;
+    font-size: 16px;
+}
+
+.wrapper {
+    min-width: 150px;
+    max-width: 1200px;
+    padding: 32px;
+}
+
+article {
+    border: 1px solid black;
+    padding: 16px;
+    margin-bottom: 3em;
+}
+
+.block-and-inline > section {
+    margin-bottom: 16px;
+    /*display: flex;*/
+}
+
+.text-container {
+    background-color: var(--bg);
+    /*border: 1px dashed black;*/
+}
+
+.is-relative {
+    position: relative;
+}
+
+.is-absolute {
+    position: absolute;
+}
+
+.fix-flow {
+    border: 1px solid transparent;
+}
+
+.vertical-size > section {
+    margin-bottom: 16px;
+    border: 1px dashed black;
+}
+
+.vertical-size > section .text-container {
+    height: 3rem;
+}
+
+.text-content {
+    background-color: var(--st);
+    /*height: 100%;*/
+    /*line-height: 2rem;*/
+}
+
+.vertical-size > section .with-height {
+    height: 2rem;
+}
+
+.is-flex {
+    display: flex;
+    /*align-items: center;*/
+}
+
+.multiline > section {
+    margin-bottom: 16px;
+    border: 1px dashed black;
+}
+
+.multiline .text-content {
+    /*text-align: justify;*/
+}
+
+.correct > section {
+    margin-bottom: 16px;
+    border: 1px dashed black;
+}
+
+.correct .container {
+    background-color: var(--bg);
+    /*text-align: center;*/
+    /*height: 3rem;*/
+    /*line-height: 3rem;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+}
+
+.correct .content {
+    background-color: var(--st);
+    /*font-size: 0;*/
+}
+
+.is-nowrap {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    /*font-size: 1rem;*/
+}
+
+.multiline .container {
+    /*text-align: justify;*/
+    /*font-size: 18px;*/
+    /*word-spacing: 0.5rem;*/
+}
+
+.multiline .content {
+    /*line-height: 1.5em;*/
+}
+
+.position .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    border: 1px dashed gray;
+    align-items: center;
+    gap: 1rem;
+}
+
+.position .button {
+    display: flex;
+    height: 2rem;
+    align-items: stretch;
+    text-transform: uppercase;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0;
+    line-height: 2rem;
+    background-color: var(--bg);
+}
+
+.position .button .text {
+    padding: 0 2rem;
+}
+
+.position .button .icon {
+    width: 2rem;
+    background-color: var(--st);
+}
+
+.button.relative-icon {
+    position: relative;
+    border-right-width: 0;
+}
+.button.relative-icon .icon {
+    position: absolute;
+    right: -2rem;
+    border: 1px solid black;
+    border-left-width: 0;
+    box-sizing: border-box;
+    height: 2rem;
+    top: -1px;
+}
+
+
+.button.bad-margin {
+    margin-right: -2rem;
+}
+

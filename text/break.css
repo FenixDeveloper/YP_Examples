@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    --bg: #AED581;
+    --st: #E57373;
+    font-size: 16px;
+}
+
+.wrapper {
+    padding: 2vw;
+}
+
+article {
+    /*column-width: calc(25vw - 4vw);*/
+    column-count: 4;
+    gap: 1vw;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    column-span: all;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: red;
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 1.5;
+    break-after: column;
+}

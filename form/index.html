@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Forms</h1>
+        <article>
+            <h2>Vertical</h2>
+            <form name="person" id="person">
+                <h3 class="title">Register</h3>
+                <div class="row">
+                    <div class="field">
+                        <label for="person-fio">Name</label>
+                        <input tabindex="1" type="text" id="person-fio" name="fio" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="person-email">Email</label>
+                        <input tabindex="3" type="text" id="person-email" name="email" placeholder="Email" />
+                        <span class="help">not corporate</span>
+                    </div>
+                    <div class="field">
+                        <label for="person-phone">Phone</label>
+                        <input tabindex="2" type="text" id="person-phone" name="phone" placeholder="Phone" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="person-password">Password</label>
+                        <input tabindex="4" type="password" id="person-password" name="password" placeholder="Password" />
+                        <span class="error">must be at least 8 symbols</span>
+                    </div>
+                </div>
+                <div class="row action">
+                    <div class="field">
+                        <input tabindex="5" type="submit" value="send" />
+                    </div>
+                </div>
+            </form>
+        </article>
+        <article>
+            <h2>Horizontal</h2>
+            <form name="person" id="person2" class="is-horizontal">
+                <h3 class="title">Register</h3>
+                <div class="row">
+                    <div class="field">
+                        <label for="person2-fio">Name</label>
+                        <input tabindex="6" type="text" id="person2-fio" name="fio" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="person2-email">Email</label>
+                        <input tabindex="7" type="text" id="person2-email" name="email" placeholder="Email" />
+                        <span class="help">not corporate</span>
+                    </div>
+                    <div class="field">
+                        <label for="person2-phone">Phone</label>
+                        <input tabindex="8" type="text" id="person2-phone" name="phone" placeholder="Phone" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="person2-password">Password</label>
+                        <input tabindex="9" type="password" id="person2-password" name="password" placeholder="Password" />
+                        <span class="error">must be at least 8 symbols</span>
+                    </div>
+                </div>
+                <div class="row action">
+                    <div class="field">
+                        <input tabindex="10" type="submit" value="send" />
+                    </div>
+                </div>
+            </form>
+        </article>
+        <article>
+            <h2>Compact</h2>
+            <form name="person" id="person3" class="is-compact">
+                <h3 class="title">Register</h3>
+                <div class="row">
+                    <div class="field">
+                        <label for="person3-fio">Name</label>
+                        <input tabindex="6" type="text" id="person3-fio" name="fio" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="person3-email">Email</label>
+                        <input tabindex="7" type="text" id="person3-email" name="email" placeholder="Email" />
+                        <span class="help">not corporate</span>
+                    </div>
+                    <div class="field">
+                        <label for="person3-phone">Phone</label>
+                        <input tabindex="8" type="text" id="person3-phone" name="phone" placeholder="Phone" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="person3-password">Password</label>
+                        <input tabindex="9" type="password" id="person3-password" name="password" placeholder="Password" />
+                        <span class="error">must be at least 8 symbols</span>
+                    </div>
+                </div>
+                <div class="row action">
+                    <div class="field">
+                        <input tabindex="10" type="submit" value="send" />
+                    </div>
+                </div>
+            </form>
+        </article>
+    </div>
+</body>
+</html>

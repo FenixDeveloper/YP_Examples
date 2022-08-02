@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Elements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <article class="block-and-inline">
+            <h2>Text Containers: Block & Inline</h2>
+            <section>
+                <div class="text-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</div>
+            </section>
+            <section>
+                <span class="text-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, officia.</span>
+            </section>
+            <section>
+                <div class="text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</p>
+                </div>
+            </section>
+            <section>
+                <span class="text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</p>
+                </span>
+            </section>
+            <section>
+                <div class="text-container">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</span>
+                </div>
+            </section>
+            <section>
+                <span class="text-container">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</span>
+                </span>
+            </section>
+            <section>
+                <div class="text-container">
+                    <p class="is-relative">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</p>
+                </div>
+            </section>
+            <section>
+                <span class="text-container">
+                    <p class="is-relative">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</p>
+                </span>
+            </section>
+            <section class="fix-flow">
+                <div class="text-container is-relative">
+                    <p class="is-absolute">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam.</p>
+                </div>
+            </section>
+        </article>
+
+        <article class="vertical-size">
+            <h2>Text: vertical sizes</h2>
+            <section>
+                <div class="text-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, rerum?</div>
+            </section>
+            <section>
+                <span class="text-container text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, rerum?</span>
+            </section>
+            <section>
+                <div class="text-container">
+                    <span class="text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, rerum?</span>
+                </div>
+            </section>
+            <section>
+                <div class="text-container is-flex">
+                    <span class="text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, rerum?</span>
+                </div>
+            </section>
+        </article>
+
+        <article class="multiline">
+            <h2>Text: Multiline</h2>
+            <section>
+                <div class="text-container text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dicta
+                    facere facilis! Commodi est expedita inventore optio quo rerum. Maxime modi nisi perferendis
+                    quisquam, sequi totam ut! A, atque cum deserunt dolorem eos eveniet explicabo fuga, fugiat itaque
+                    labore magnam minima natus nesciunt odit quasi tempora tempore unde voluptatem voluptatum?
+                </div>
+            </section>
+            <section>
+                <span class="text-container text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut dolor dolores est, harum impedit ipsum iusto necessitatibus numquam omnis, qui tenetur voluptatum. A adipisci amet beatae consectetur consequatur, cumque cupiditate, dolores expedita facilis fugiat iusto labore laudantium, minima placeat possimus quia quidem ratione rem sed tenetur velit voluptate voluptatum!</span>
+            </section>
+            <section>
+                <div class="text-container">
+                    <span class="text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque distinctio dolore enim error exercitationem facere hic id ipsam, iste, laboriosam nemo nihil porro praesentium provident rem saepe sint! At, autem dolor dolore doloremque ducimus ea eligendi, eos inventore itaque nemo nesciunt obcaecati perferendis quos ratione suscipit tempora voluptatem. Eligendi, explicabo?</span>
+                </div>
+            </section>
+        </article>
+        <article class="correct">
+            <h2>Correct: one line</h2>
+            <section>
+                <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+                    voluptatibus.
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <span class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+                    voluptatibus.</span>
+                </div>
+            </section>
+            <section>
+                <div class="container is-nowrap">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequatur eveniet explicabo magni maxime ut vitae voluptatum! Adipisci asperiores cumque dolore, eius facilis itaque minus mollitia nisi odit repellat sunt vero voluptatibus. Aperiam architecto autem, doloremque dolores harum ipsa nobis nulla numquam officiis possimus quisquam repellendus sapiente temporibus totam!
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <span class="content is-nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequatur eveniet explicabo magni maxime ut vitae voluptatum! Adipisci asperiores cumque dolore, eius facilis itaque minus mollitia nisi odit repellat sunt vero voluptatibus. Aperiam architecto autem, doloremque dolores harum ipsa nobis nulla numquam officiis possimus quisquam repellendus sapiente temporibus totam!</span>
+                </div>
+            </section>
+        </article>
+        <article class="correct multiline">
+            <h2>Correct: multiline</h2>
+            <section>
+                <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at eligendi eos esse ex fuga id impedit ipsum iste itaque iure labore laborum maxime, molestiae mollitia natus nihil non obcaecati odit provident sequi similique tenetur totam ut, vel! Animi aut dolore expedita libero maiores necessitatibus nisi quaerat quisquam quo voluptas!</div>
+            </section>
+            <section>
+                <div class="container">
+                    <span class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad assumenda atque, deserunt dolor dolore dolorem doloribus eos ex expedita harum id incidunt iusto, magnam, molestias odio optio pariatur quaerat quos sed temporibus unde vel veniam voluptates voluptatum. Alias atque, blanditiis corporis distinctio dolorum inventore minus odio placeat quasi velit.</span>
+                </div>
+            </section>
+            <section>
+                <div class="container is-flex">
+                    <span class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad assumenda atque, deserunt dolor dolore dolorem doloribus eos ex expedita harum id incidunt iusto, magnam, molestias odio optio pariatur quaerat quos sed temporibus unde vel veniam voluptates voluptatum. Alias atque, blanditiis corporis distinctio dolorum inventore minus odio placeat quasi velit.</span>
+                </div>
+            </section>
+        </article>
+        <article class="position">
+            <h2>Button: Position</h2>
+            <section>
+                <div class="container">
+                    <button class="button">
+                        <span class="text">action</span>
+                        <span class="icon">✓</span>
+                    </button>
+                    <button class="button relative-icon">
+                        <span class="text">action</span>
+                        <span class="icon">✓</span>
+                    </button>
+                    <button class="button bad-margin">
+                        <span class="text">action</span>
+                        <span class="icon">✓</span>
+                    </button>
+                    <button class="button">
+                        <span class="text">action</span>
+                    </button>
+                </div>
+            </section>
+        </article>
+    </div>
+</body>
+</html>
