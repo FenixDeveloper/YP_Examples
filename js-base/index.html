@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>JS actions</h1>
+
+        <button class="button toggle-popup" data-target="modal-test">open modal</button>
+
+        <section>
+            <h2>Icons</h2>
+            <div class="button-group">
+                <i class="icon icon-like toggle-class button-large" data-target="is-active"></i>
+
+                <button class="icon-button button-large toggle-icon" data-target="icon-heart-solid">
+                    <i class="icon icon-heart-regular"></i>
+                </button>
+
+                <button class="icon-button button-large toggle-icon" data-target="icon-toggle-on-solid icon-microphone-solid icon-microphone-slash-solid">
+                    <i class="icon icon-toggle-off-solid"></i>
+                </button>
+
+                <label class="icon-checkbox button-large">
+                    <input type="checkbox" />
+                    <span class="icon-checkmark"></span>
+                </label>
+            </div>
+        </section>
+
+        <section>
+            <h2>Forms</h2>
+            <form name="get-title" id="get-title">
+                <h3 class="title">Get title by URL</h3>
+                <div class="field">
+                    <label for="gt-url">URL</label>
+                    <input tabindex="1" type="text" id="get-title-url" name="url" placeholder="Type page url here" />
+                </div>
+                <div class="row action">
+                    <div class="field">
+                        <input tabindex="10" type="submit" id="get-title-request" value="REQUEST" class="button" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div class="popup modal overlay" id="modal-test" role="dialog">
+        <div class="modal-container">
+            <div class="header">
+                <h3 class="title">Modal</h3>
+                <button class="close" tabindex="1"></button>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi facilis fuga quas recusandae.
+                    Accusantium commodi cupiditate deserunt dicta, distinctio dolorem ex iure natus quaerat quidem
+                    ratione repellat sint soluta velit voluptas. Commodi corporis cumque distinctio eius exercitationem
+                    fuga illo incidunt molestiae tenetur voluptate? Animi at cum, hic quae quo vitae?</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="events.js"></script>
+    <script src="fetch.js"></script>
+    <script src="toggle.js"></script>
+    <script>
+        window.onReady(() => {
+            const $form = document.forms['get-title'];
+            const $inputURL = $form.elements['url'];
+            const $inputURL_Field = $inputURL.parentElement;
+            const $submitBtn = $form.elements['get-title-request'];
+
+            const isLocalhost = location.hostname === 'localhost';
+            const isSecure = location.protocol === 'https:';
+            let $help = document.createElement('span');
+            let $error = document.createElement('span');
+
+            const displayError = (msg) => {
+                if (msg) {
+                    $help.remove();
+                    $error.innerText = msg;
+                    $inputURL_Field.append($error);
+                } else {
+                    $error.remove();
+                    if ($help.innerText) {
+                        $inputURL_Field.append($help);
+                    }
+                }
+            };
+
+            $help.classList.add('help');
+            $error.classList.add('error');
+            if (isLocalhost) {
+                $help.innerText = 'only localhost url';
+            } else {
+                if (isSecure) {
+                    $help.innerText = 'only https url'
+                }
+            }
+            if ($help.innerText) {
+                $inputURL_Field.append($help);
+            }
+
+            $submitBtn.disabled = true;
+            $inputURL.addEventListener('keyup', () => {
+                displayError(false);
+                $submitBtn.disabled = $inputURL.value.length <= 0;
+            });
+
+            $form.addEventListener('submit', (event) => {
+               event.preventDefault();
+                download($inputURL.value)
+                    .then(title => window.alert(title))
+                    .catch(err => {
+                        displayError(`${err}`);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
