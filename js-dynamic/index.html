@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Dynamic Content</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>Dynamic Content</h1>
+            <select id="method">
+                <option value="create" selected>CREATE</option>
+                <option value="first">FIRST</option>
+                <option value="template">TEMPLATE</option>
+            </select>
+            <button id="add-photo">
+                <i class="icon-plus-solid"></i>
+            </button>
+        </header>
+        <section class="photos">
+            <div>
+                <button><i class="icon-trash-can-solid"></i></button>
+                <img src="https://placehold.co/250?text=1" alt="1" />
+                <p>Image 1 with long text enough for overflow</p>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/html" id="photo-template">
+        <div>
+            <button><i class="icon-trash-can-solid"></i></button>
+            <img src="https://placehold.co/250?text=EMPTY" alt="1" />
+            <p>Image 1</p>
+        </div>
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@import "css/Glyphter.css";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    --bg: #AED581;
+    --st: #E57373;
+    font-size: 16px;
+}
+
+main {
+    box-sizing: border-box;
+    padding: 2rem;
+    height: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+header button, header select {
+    border: 1px solid gray;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: var(--bg);
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.photos > div {
+    position: relative;
+}
+
+.photos > div > button {
+    position: absolute;
+    right: 0;
+    border: none;
+    background: none;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.photos > div > button:hover {
+    opacity: 1;
+}
+
+.photos > div > img {
+    width: 100%;
+    display: block;
+}
+
+.photos > div > p {
+    margin: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    line-height: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 0.5rem;
+}

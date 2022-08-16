@@ -36,10 +36,10 @@
 
         <section>
             <h2>Forms</h2>
-            <form name="get-title" id="get-title">
+            <form name="get-title" id="get-title" action="/send/to/" method="POST">
                 <h3 class="title">Get title by URL</h3>
                 <div class="field">
-                    <label for="gt-url">URL</label>
+                    <label for="get-title-url">URL</label>
                     <input tabindex="1" type="text" id="get-title-url" name="url" placeholder="Type page url here" />
                 </div>
                 <div class="row action">
@@ -114,7 +114,8 @@
             });
 
             $form.addEventListener('submit', (event) => {
-               event.preventDefault();
+                event.preventDefault();
+
                 download($inputURL.value)
                     .then(title => window.alert(title))
                     .catch(err => {
