@@ -30,7 +30,8 @@ function initCreatedPhoto() {
     $btn.innerHTML = '<i class="icon-trash-can-solid"></i>';
 
     /*
-    $div.innerHTML = '<img src="" alt="" /><p></p>';
+    $div.innerHTML = '<button><i class="icon-trash-can-solid"></i></button><img src="" alt="" /><p></p>';
+    const $btn = $div.querySelector('button');
     const $img = $div.querySelector('img');
     const $p = $div.querySelector('p');
     */
@@ -54,7 +55,7 @@ function initFirstPhoto($container) {
     return clonePhoto($div, $img, $p);
 }
 
-function initTemplatePhoto(id) {
+function initTemplatePhoto1(id) {
     const $template = document.getElementById(id);
     const $inner = document.createElement('div');
     $inner.innerHTML = $template.innerText;
@@ -66,10 +67,20 @@ function initTemplatePhoto(id) {
     return clonePhoto($div, $img, $p);
 }
 
+function initTemplatePhoto2(id) {
+    const $template = document.getElementById(id);
+    const $div = $template.content.querySelector('*:first-child');
+    const $img = $div.querySelector('img');
+    const $p = $div.querySelector('p');
+
+    return clonePhoto($div, $img, $p);
+}
+
 const createMethods = {
     create: initCreatedPhoto(),
     first: initFirstPhoto($photos),
-    template: initTemplatePhoto('photo-template')
+    template1: initTemplatePhoto1('photo-template1'),
+    template2: initTemplatePhoto2('photo-template2')
 };
 
 $buttonAdd.addEventListener('click', () => {

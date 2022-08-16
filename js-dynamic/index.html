@@ -16,7 +16,8 @@
             <select id="method">
                 <option value="create" selected>CREATE</option>
                 <option value="first">FIRST</option>
-                <option value="template">TEMPLATE</option>
+                <option value="template1">SCRIPT</option>
+                <option value="template2">TEMPLATE</option>
             </select>
             <button id="add-photo">
                 <i class="icon-plus-solid"></i>
@@ -31,13 +32,21 @@
         </section>
     </main>
 
-    <script type="text/html" id="photo-template">
+
+    <script type="text/html" id="photo-template1">
         <div>
             <button><i class="icon-trash-can-solid"></i></button>
             <img src="https://placehold.co/250?text=EMPTY" alt="1" />
             <p>Image 1</p>
         </div>
     </script>
+    <template id="photo-template2">
+        <div>
+            <button><i class="icon-trash-can-solid"></i></button>
+            <img src="https://placehold.co/250?text=EMPTY" alt="1" />
+            <p>Image 1</p>
+        </div>
+    </template>
     <script src="script.js"></script>
 </body>
 </html>
