@@ -1,0 +1,293 @@
+@import "./css/Glyphter.css";
+
+:root {
+    --activeColor: #f57f17;
+    --bubbleLeft: #d7ccc8;
+    --bubbleRight: #b39ddb;
+    --readySkill: #b0bec5;
+    --notReadySkill: #eeeeee;
+    --notActiveEffect: #eeeeee;
+    --activePositiveEffect: #c5e1a5;
+    --activeNegativeEffect: #ffab91;
+
+    --healthColor: #a5d6a7;
+    --manaColor: #90caf9;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header, .container {
+    display: flex;
+    width: 100%;
+    max-height: calc(100% - 41px);
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+
+header section {
+    display: flex;
+}
+
+header section h2 {
+    flex-grow: 1;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+aside, .player-header {
+    width: 20vw;
+    min-width: 250px;
+}
+
+main, .control-panel {
+    flex-grow: 1;
+}
+
+.player-left {
+    border-right: 1px solid black;
+    text-align: left;
+}
+
+.player-right {
+    border-left: 1px solid black;
+    text-align: right;
+}
+
+header .player-right {
+    flex-direction: row-reverse;
+}
+
+header section, aside, main {
+    padding: 0.5rem 1rem;
+}
+
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    transition: color .15s ease-in-out, background .15s ease-in-out;
+}
+
+button:hover {
+    background: var(--activeColor);
+}
+
+button.icon:hover {
+    color: var(--activeColor);
+    background: transparent;
+}
+
+header section * {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    height: 1.5rem;
+}
+
+header h2 span {
+    font-style: normal;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+}
+
+.speed {
+    display: flex;
+}
+
+.speed input {
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+    width: 2rem;
+    border: none;
+    font-family: 'Roboto Mono', monospace;
+    cursor: auto;
+}
+
+aside section {
+    margin-bottom: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.value p {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 0.25rem;
+}
+
+.value div {
+    border: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.value div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: var(--val);
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    z-index: -1;
+}
+
+.effects > div {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.effects > div > span {
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    background: var(--notActiveEffect);
+    opacity: 0.5;
+}
+
+.effects > div > span.active {
+    opacity: 1;
+}
+
+.effects > div > span.active.positive {
+    background: var(--activePositiveEffect);
+}
+
+.effects > div > span.active.negative {
+    background: var(--activeNegativeEffect);
+}
+
+.skills > div > span {
+    background-color: var(--readySkill);
+}
+
+main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main article {
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+main article.left {
+    background: var(--bubbleLeft);
+}
+
+main article.right {
+    text-align: right;
+    align-self: flex-end;
+    background: var(--bubbleRight);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-active {
+    display: flex;
+}
+
+.modal-container {
+    width: 50vw;
+    padding: 1rem 2rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-container .modal-header {
+    display: flex;
+}
+
+.modal-container .modal-header h2 {
+    flex-grow: 1;
+}
+
+.modal-container .modal-content {
+    flex-grow: 1;
+}
+
+.modal-container .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.modal-container .modal-footer button {
+    border: 1px solid black;
+    padding: 0.25rem 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type=text] {
+    line-height: 1.5rem;
+}
+
+form .field .help {
+    font-size: 0.8rem;
+}
+
+form .columns {
+    display: flex;
+    gap: 1rem;
+}
+
+form .columns > div {
+    flex-grow: 1;
+}

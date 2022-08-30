@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game State</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header>
+			<section class="player-header player-left">
+				<h2>Player: <span id="player-left-title">A</span></h2>
+				<button id="player-left-configure" class="icon icon-user-gear-solid"></button>
+			</section>
+			<section class="control-panel">
+				<h2>Step: <span id="current-step">1</span></h2>
+				<!--<div class="speed">
+					<button id="speed-decrease" class="icon icon-angles-left-solid"></button>
+					<input id="speed-label" type="text" value="1x" readonly />
+					<button id="speed-increase" class="icon icon-angles-right-solid"></button>
+				</div>-->
+				<div class="buttons">
+					<button id="game-play-pause" class="icon icon-play-solid"></button>
+					<!--<button id="game-stop" class="icon icon-stop-solid"></button>-->
+				</div>
+			</section>
+			<section class="player-header player-right">
+				<h2>Player: <span id="player-right-title">B</span></h2>
+				<button id="player-right-configure" class="icon icon-user-gear-solid"></button>
+			</section>
+		</header>
+		<div class="container">
+			<aside class="player-left">
+				<section id="player-left-info" class="info">
+					<span>constitution: 50</span>
+					<span>speed: 50</span>
+					<span>agility: 50</span>
+				</section>
+				<section class="value">
+					<p>health</p>
+					<div id="player-left-health" style="--bg: #a5d6a7; --val: 0%;">
+						<span id="player-left-health-current">175</span> / <span id="player-left-health-max">500</span>
+					</div>
+				</section>
+				<section class="value">
+					<p>mana</p>
+					<div id="player-left-mana" style="--bg: #90caf9; --val: 0%;">
+						<span id="player-left-mana-current">300</span> / <span id="player-left-mana-max">500</span>
+					</div>
+				</section>
+				<!--<section class="effects">
+					<h3>Effects</h3>
+					<div>
+						<span class="negative active">wound</span>
+						<span class="positive active">extra speed</span>
+						<span class="positive">quick regen</span>
+					</div>
+				</section>
+				<section class="effects skills">
+					<h3>Skills</h3>
+					<div>
+						<span class="active">defend</span>
+						<span class="active">regen</span>
+						<span class="">critical attack</span>
+					</div>
+				</section>-->
+			</aside>
+			<main id="history">
+				<article class="left">
+					<h3>Player: <span>A</span> on step <span>12</span></h3>
+					<p>attack player B, hit 50hp</p>
+				</article>
+				<article class="right">
+					<h3>Player: <span>B</span> on step <span>13</span></h3>
+					<p>attack player B, hit 50hp</p>
+				</article>
+			</main>
+			<aside class="player-right">
+				<section id="player-right-info" class="info">
+					<span>constitution: 50</span>
+					<span>speed: 50</span>
+					<span>agility: 50</span>
+				</section>
+				<section class="value">
+					<p>health</p>
+					<div id="player-right-health" style="--bg: #a5d6a7; --val: 0%;">
+						<span id="player-right-health-current">175</span> / <span id="player-right-health-max">500</span>
+					</div>
+				</section>
+				<section class="value">
+					<p>mana</p>
+					<div id="player-right-mana" style="--bg: #90caf9; --val: 0%;">
+						<span id="player-right-mana-current">300</span> / <span id="player-right-mana-max">500</span>
+					</div>
+				</section>
+			</aside>
+		</div>		
+	</div>
+
+	<div class="modal" id="configure-player">
+		<div class="modal-container">
+			<div class="modal-header">
+				<h2>Configure player</h2>
+				<button id="close" class="icon icon-xmark-solid"></button>
+			</div>
+			<div class="modal-content">
+				<form>
+					<div class="field">
+						<label for="player-configure-title">Имя</label>
+						<input id="player-configure-title" type="text" />
+						<span class="help">от 0 до 100</span>
+					</div>
+					<div class="field">
+						<label for="constitution">Телосложение</label>
+						<input id="constitution" type="range" min="0" max="100" />
+						<span class="help">от 0 до 100</span>
+					</div>
+					<div class="columns">
+						<div class="field">
+							<label for="armor">Броня</label>
+							<input id="armor" type="range" min="0" max="100" />
+							<span class="help">от 0 до 100</span>
+						</div>
+						<div class="field">
+							<label for="weapon">Оружие</label>
+							<input id="weapon" type="range" min="0" max="100" />
+							<span class="help">от 0 до 100</span>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="value">
+							<p>health</p>
+							<div id="player-configure-health" style="--bg: #a5d6a7; --val: 0%;">
+								<span id="player-configure-health-current">175</span> / <span id="player-configure-health-max">500</span>
+							</div>
+						</div>
+						<div class="value">
+							<p>mana</p>
+							<div id="player-configure-mana" style="--bg: #90caf9; --val: 0%;">
+								<span id="player-configure-mana-current">300</span> / <span id="player-configure-mana-max">500</span>
+							</div>
+						</div>
+					</div>
+					<div id="player-configure-info" class="info">
+						<span>constitution: 50</span>
+						<span>speed: 50</span>
+						<span>agility: 50</span>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button id="cancel">CANCEL</button>
+				<button id="save">SAVE</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="utils.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
