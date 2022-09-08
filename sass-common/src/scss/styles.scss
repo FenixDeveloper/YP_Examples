@@ -1,0 +1,19 @@
+/* @import это устаревший способ, 
+но он позволяет не вызывать в дальнейшем все модули 
+в местах использования.
+Работает везде с любыми инструментами.*/
+
+//@import "mixins/clearfix";
+//@import "variables";
+
+//@import "../vendor/normalize.css";
+//@import "../common.blocks/hero/hero.scss";
+//@import "../common.blocks/hero/__button/hero__button.scss";
+
+/* Это более современный способ, 
+работает только в dart sass (пакет sass оригинальный) */
+@use "../vendor/normalize.css";
+@use "../common.blocks/hero/hero.scss";
+@use "../common.blocks/hero/__button/hero__button.scss";
+
+

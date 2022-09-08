@@ -28,7 +28,8 @@ function random(p) {
     let min = proportional(50, 90, -p, [5,95]);
     let max = proportional(50, 90, p, [5,95]);
     let current = Math.random()*100;
-    return (current > min) && (current < max); }
+    return (current > min) && (current < max); 
+}
 
 function resource(baseValue, baseRegen, spread, variation = 50) {
     let min = 0;

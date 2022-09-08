@@ -1,0 +1,26 @@
+{
+  "name": "sass-common",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "cp -r ./src/common.bundles/* ./src/images ./src/fonts ./src/public/* ./dist",
+    "compile": "sass src/scss/styles.scss dist/css/styles.css --load-path src/scss",
+    "build-gulp": "gulp",
+    "server": "http-server ./dist",
+    "clear": "rm -r ./dist/* && touch ./dist/.gitkeep",
+    "build-sass": "yarn compile && yarn copy"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 3 versions",
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.8"
+  }
+}

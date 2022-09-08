@@ -1,0 +1,15 @@
+@use "variables" as *; /* используем переменные напрямую без пространства имен */
+@use "mixins"; /* миксины через mixins/index.scss попадут к нам в пространстве имен mixins */
+
+.hero {
+	width: 100%;
+	min-height: 25rem;
+	font-family: Arial, Helvetica, sans-serif;
+
+	@include mixins.background("/images/300x200.jpg"); /* так как не настроена обработка и извлечение ресурсов, обращаемся по адресу как в браузере */
+	@include mixins.clearfix; //просто так, для примера
+
+	&__button { //итоговое имя класса .hero__button
+		margin: 0.25 * $actionFontSize; //вычисления производятся на месте
+	}
+}
