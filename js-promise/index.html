@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Promise tester</h1>
+        <main>
+            <textarea id="clipboard"></textarea>
+            <div>
+            <button id="copy">COPY</button>
+            <button id="paste">PASTE</button>
+            </div>
+        </main>
+
+        <form name="user-register" class="form form_vertical">
+            <label>
+                <span class="field-label">Name</span>
+                <input name="name" type="text" data-min="2" data-max="30" />
+                <span class="field-error"></span>
+            </label>
+            <label>
+                <span class="field-label">Age</span>
+                <input name="age" type="number" data-min="18" data-max="55" />
+                <span class="field-error"></span>
+            </label>
+            <label>
+                <span class="field-label">About</span>
+                <textarea name="bio" data-max="200"></textarea>
+                <span class="field-error"></span>
+            </label>
+            <label class="checkbox">
+                <span class="field-label">Agree with <a href="#">rules</a></span>
+                <input type="checkbox" name="agree" data-value="true" />
+            </label>
+            <div>
+                <button type="submit">REGISTER</button>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  padding: 1rem;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 50vh;
+
+  &> * {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &> label {
+    .field-label {
+      min-width: 5rem;
+    }
+    .field-error {
+      font-size: 0.8rem;
+      color: red;
+      display: block;
+      min-height: 1rem;
+    }
+
+    input {
+      border: 1px solid gray;
+      padding: 0.25rem 0.5rem;
+    }
+
+    &.checkbox {
+      flex-direction: row-reverse!important;
+      justify-content: flex-end;
+      align-items: center;
+      line-height: 1rem;
+    }
+  }
+
+  &.form_vertical {
+    &> label {
+      flex-direction: column;
+    }
+  }
+}
