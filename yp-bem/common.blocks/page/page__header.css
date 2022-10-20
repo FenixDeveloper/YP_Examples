@@ -1,0 +1,6 @@
+.page__header {
+    height: 50px;
+    background: white;
+    border-bottom: 1px solid gray;
+    padding: 0 2rem;
+}

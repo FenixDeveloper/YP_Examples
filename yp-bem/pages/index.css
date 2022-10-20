@@ -1,0 +1,23 @@
+@import '../vendor/normalize.css';
+@import '../vendor/fonts.css';
+
+@import '../common.blocks/page/page__header.css';
+@import '../common.blocks/page/page_header-fixed.css';
+
+@import '../common.blocks/header/header.css';
+@import '../common.blocks/header/header__item.css';
+@import '../common.blocks/header/header__item_wide.css';
+
+@import '../common.blocks/logo/logo.css';
+@import '../common.blocks/logo/logo__image.css';
+
+@import '../common.blocks/main/main.css';
+@import '../common.blocks/main/__section/main__section.css';
+@import '../common.blocks/main/__section/_wide/main__section_wide.css';
+
+@import '../common.blocks/post/post.css';
+@import '../common.blocks/post/post__header.css';
+@import '../common.blocks/post/post__header-item.css';
+@import '../library.blocks/post/post_type-hot.css';
+
+@import '../common.blocks/footer/footer.css';

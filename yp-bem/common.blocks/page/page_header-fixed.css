@@ -1,0 +1,10 @@
+.page_header-fixed {
+    padding-top: 50px;
+}
+
+.page_header-fixed .page__header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+}

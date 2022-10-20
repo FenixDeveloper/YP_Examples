@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple blog</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+    <header class="header page__header">
+        <div class="logo header__item">
+            <img class="logo__image" src="https://placehold.co/100?text=logo" />
+            <span>Уютный блог</span>
+        </div>
+        <nav class="header__item header__item_wide">
+            <a href="/about">Обо мне</a>
+            <a href="/contacts">Контакты</a>
+            <a href="/examples">Примеры работ</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="main__section">
+            <h1>Просто блог обо всем</h1>
+            <p>Приветствую вас в моем блоге, надеюсь найдете что-то полезное.</p>
+        </section>
+
+        <section class="main__section main__section_wide">
+            <article class="post main__post-item post_type-hot">
+                <div class="post__header">
+                    <h2 class="post__header-item">Какой-то пост, о чем-то там</h2>
+                    <span class="post__header-item">23.10.2022 22:30</span>
+                </div>
+                <div class="post__content">
+                    <p>анонс или краткое содержание поста</p>
+                </div>
+            </article>
+
+            <article class="post main__post-item">
+                <div class="post__header">
+                    <h2 class="post__header-item">Какой-то пост, о чем-то там</h2>
+                    <span class="post__header-item">23.10.2022 22:30</span>
+                </div>
+                <div class="post__content">
+                    <p>анонс или краткое содержание поста</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Author © 2022</p>
+    </footer>
+</body>
+</html>
