@@ -1,0 +1,8 @@
+.card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    outline: 1px solid gray;
+    outline-offset: -10px;
+}

@@ -1,0 +1,55 @@
+@import "./base.css";
+
+.item {
+    border: 1px dashed black;
+    min-height: 100px;
+    max-width: 50%;
+    display: block;
+}
+
+.red {
+    margin-left: 4rem;
+}
+
+.c1 {
+    /*display: flex;*/
+    flex-direction: column;
+}
+
+.c1 > .green {
+    z-index: 2;
+    /*position: relative;*/
+    /*opacity: 0.9;*/
+}
+
+.c1 > .red {
+    margin-top: -2rem;
+}
+
+.black-bg {
+    background-color: black;
+}
+
+.menu {
+    display: flex;
+    gap: 3rem;
+    border-bottom: 3px solid #eee;
+}
+
+.menu-item {
+    list-style: none;
+    padding: 0.25rem;
+    /*margin: 0 1rem;*/
+    margin-bottom: -3px;
+    border-bottom: 3px solid transparent;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    /*text-decoration: underline;*/
+}
+
+.menu-item:hover {
+    border-bottom: 3px solid red;
+}

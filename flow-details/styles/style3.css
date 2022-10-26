@@ -1,0 +1,38 @@
+@import './base.css';
+
+.c-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.c-grid .item {
+    border-width: 1px;
+    box-sizing: border-box;
+    width: 30%;
+}
+
+.c-grid .item.hard {
+    background-color: gray!important;
+}
+
+.hard {
+    background-color: #9999FF!important;
+    /*background-color: #9999FF;*/
+}
+
+.second {
+    background-color: #99ff99;
+}
+
+#colored-cell {
+    background-color: #ff9999;
+}
+
+.A1 {
+    background-color: #ff9999;
+}
+
+.A2 {
+    background-color: #9999FF;
+}

@@ -1,0 +1,10 @@
+.menu_vertical {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu_vertical .menu__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}

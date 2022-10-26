@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <link rel="stylesheet" href="styles/style2.css">
+</head>
+<body>
+    <article>
+        <h1>Position</h1>
+        <section>
+            <div class="container">
+                <span class="item red">A</span>
+                <span class="item green item-rel">B</span>
+                <span class="item-rel">
+                    <span class="item green item-abs">C</span>
+                </span>
+                <span class="item blue item-abs">D</span>
+                <span class="item blue item-fix">E</span>
+            </div>
+        </section>
+    </article>
+
+    <article>
+        <h1>Grouping</h1>
+        <section>
+            <div class="container nw-container">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+            </div>
+            <div class="container nw-container nw-container-2g">
+                <div class="item green">A</div>
+                <div class="item green">B</div>
+                <div class="item green">C</div>
+
+                <span class="item red">D</span>
+                <span class="item red">E</span>
+            </div>
+            <div class="container nw-container nw-container-2c">
+                <div class="container nw-container">
+                    <div class="item green">A</div>
+                    <div class="item green">B</div>
+                    <div class="item green">C</div>
+                </div>
+
+                <div class="container nw-container nw-container-column">
+                    <span class="item red">D</span>
+                    <span class="item red">E</span>
+                </div>
+            </div>
+        </section>
+    </article>
+</body>
+</html>

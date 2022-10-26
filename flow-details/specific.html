@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity</title>
+    <link rel="stylesheet" href="styles/style3.css">
+</head>
+<body>
+  <article>
+      <h1>Специфичность селектора</h1>
+      <section>
+          <div class="container c-grid">
+              <div class="item">Cell 1</div>
+              <div class="item second">Cell 2</div>
+              <div class="item">Cell 3</div>
+              <div class="item">Cell 4</div>
+              <div id="colored-cell" class="item second">Cell 5</div>
+              <div class="item">Cell 6</div>
+              <div class="item">Cell 7</div>
+              <div class="item second hard">Cell 8</div>
+              <div class="item">Cell 9</div>
+          </div>
+      </section>
+  </article>
+
+    <article>
+        <h1>Порядок классов</h1>
+        <div class="container c-grid">
+            <div class="item A1 A2">Cell 1</div>
+            <div class="item A2 A1">Cell 2</div>
+            <div class="item">Cell 3</div>
+        </div>
+    </article>
+</body>
+</html>

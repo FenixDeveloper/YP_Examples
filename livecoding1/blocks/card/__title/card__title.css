@@ -1,0 +1,6 @@
+.card__title {
+    margin: 0;
+    position: absolute;
+    padding: 10px;
+    text-transform: uppercase;
+}

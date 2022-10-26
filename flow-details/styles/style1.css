@@ -1,0 +1,157 @@
+@import './base.css';
+
+.container {
+    /*font-size: 0;*/
+}
+
+.item {
+    display: inline-block;
+    width: 25%;
+    font-size: 1rem;
+}
+
+.f-container {
+    box-sizing: border-box;
+}
+
+.f-item {
+    float: left;
+    box-sizing: border-box;
+}
+
+.b-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.b-item {
+    box-sizing: border-box;
+}
+
+.border .item {
+    box-sizing: border-box;
+}
+
+.content .item {
+    box-sizing: content-box;
+}
+
+.b1-container {
+    display: flex;
+    height: 250px;
+}
+
+.b1-item {
+    height: fit-content;
+}
+
+.b1-item.green {
+    width: 100px;
+}
+
+.b1-item.red {
+    width: 100px;
+}
+
+.b1p-container {
+    display: flex;
+    align-items: center;
+}
+
+.b1p-container img {
+    height: 4rem;
+}
+
+.b1p-item {
+    border-width: 1px;
+    line-height: 1rem;
+}
+
+.b1p-item.green {
+    line-height: 1rem;
+    padding: 1rem;
+}
+
+.b1p-item.red {
+    line-height: 2rem;
+    padding: 1rem;
+}
+
+.b1m-container {
+    display: flex;
+    align-items: center;
+}
+
+.b1m-container img {
+    height: 4rem;
+}
+
+.b1m-item {
+    border-width: 1px;
+    line-height: 1rem;
+}
+
+.b1m-item.green {
+    line-height: 1rem;
+    margin: 1rem 0;
+}
+
+.b1m-item.red {
+    line-height: 2rem;
+    margin: 1rem 0;
+}
+
+.b2-container {
+    display: flex;
+}
+
+.b2-item, .b3-item {
+    flex-grow: 1;
+    width: auto;
+}
+
+.b2-item-s2 {
+    flex-grow: 2;
+}
+
+.b2-item-s3 {
+    flex-grow: 3;
+}
+
+.b2-item-fixed {
+    max-width: 4rem;
+}
+
+.b3-container {
+    display: flex;
+    gap: 10px;
+    background-color: gray;
+    padding: 10px;
+}
+
+.b3-container .item {
+    border: 0;
+}
+
+.b3-outline {
+    outline: 10px dashed blue;
+}
+
+.b4-container {
+    display: flex;
+}
+
+.b4-item {
+    flex-grow: 1;
+    border: 10px solid gray;
+    border-right: 0;
+}
+
+.b4-item:last-of-type {
+    border-right: 10px solid gray;
+}
+
+.b4-outline {
+    outline: 10px dashed blue;
+    outline-offset: -10px;
+}

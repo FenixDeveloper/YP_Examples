@@ -1,0 +1,44 @@
+@import './base.css';
+
+.item-abs {
+    position: absolute;
+    top: 10px;
+}
+
+.item-rel {
+    position: relative;
+    top: 10px;
+    margin-left: 5%;
+}
+
+.item-fix {
+    position: fixed;
+    top: 10px;
+    left: 400px;
+}
+
+.nw-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.nw-container .item {
+    /*margin-right: 1rem;*/
+}
+
+.nw-container div:last-of-type {
+    margin-right: 0;
+}
+
+.nw-container-2g div:last-of-type {
+    margin-right: 8rem;
+}
+
+.nw-container-2c {
+    justify-content: space-between;
+}
+
+.nw-container-column {
+    flex-direction: column;
+}

@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+article h1 {
+    padding: 1rem 2rem 0;
+}
+
+section {
+    padding: 1rem 2rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid black;
+    clear: both;
+}
+
+.container {
+    border: 1px dashed gray;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.item {
+    border: 10px solid gray;
+    padding: 1rem;
+    /*display: inline-block;*/
+}
+
+.green {
+    background-color: #99ff99;
+}
+
+.red {
+    background-color: #ff9999;
+}
+
+.blue {
+    background-color: #9999FF;
+}

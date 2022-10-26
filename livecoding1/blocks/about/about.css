@@ -1,0 +1,5 @@
+.about {
+    display: flex;
+    gap: 40px;
+    text-align: justify;
+}
