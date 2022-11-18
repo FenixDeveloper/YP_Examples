@@ -1,0 +1,40 @@
+$family-sans-serif: Roboto, Helvetica, Arial, sans-serif;
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+//$primary: #6A1B9A;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+@import "~bulma/bulma";
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo__item {
+  display: flex;
+  gap: 1rem;
+
+  &.todo__complete {
+    box-shadow: none;
+    border: 1px solid rgb(10 10 10 / 10%);
+    opacity: 80%;
+
+    .todo__label {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.todo__label {
+  flex-grow: 1;
+  padding-right: 2rem;
+}
