@@ -7,3 +7,17 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 
 @import "~bulma/bulma";
 
+.calendar {
+	width: 100%;
+
+	&__table {
+		width: 100%;
+	}
+
+	&__header-column {
+		background-color: $info;
+		color: $light;
+		font-weight: 100;
+    	padding: 0.5rem;
+	}
+}
