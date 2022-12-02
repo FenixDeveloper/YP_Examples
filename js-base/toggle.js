@@ -1,37 +1,39 @@
 window.onReady(() => {
-    const $toggleModal = document.querySelectorAll('.toggle-popup');
-    $toggleModal.forEach($toggleBtn => {
-        if (!$toggleBtn.dataset.target) {
+    //Открытие модальных окон
+    const $toggleModal = document.querySelectorAll('.toggle-popup'); //нашли триггеры которые должны открывать окно
+    $toggleModal.forEach($toggleBtn => { //перебираем триггеры
+        if (!$toggleBtn.dataset.target) { //проверяем что есть цель для открытия
             console.error(`toggle-popup: button has not set target`, $toggleBtn);
             return;
         }
-        const $targetPopup = document.getElementById($toggleBtn.dataset.target);
-        if (!$targetPopup) {
+        const $targetPopup = document.getElementById($toggleBtn.dataset.target); //находим требуемое окно
+        if (!$targetPopup) { //если нет, то и открывать нечего
             console.error(`toggle-popup: target not found`, $toggleBtn);
             return;
         }
 
-        $toggleBtn.addEventListener('click', () => {
+        $toggleBtn.addEventListener('click', () => { //добавляем событие клик на триггере
             $targetPopup.classList.add('is-active');
             $close.tabIndex = 1;
         });
 
-        const $close = $targetPopup.querySelectorAll('.close');
+        const $close = $targetPopup.querySelectorAll('.close'); //добавляем событие клик на кнопке закрыть
         $close.forEach($closeBtn => {
             $closeBtn.addEventListener('click', () => {
                 $targetPopup.classList.remove('is-active');
             });
         });
 
-        if ($targetPopup.className.includes('overlay')) {
+        if ($targetPopup.className.includes('overlay')) { //добавляем событие клик на оверлей
             $targetPopup.addEventListener('click', (e) => {
-                if (e.target === $targetPopup) {
+                if (e.target === $targetPopup) { //проверяем что нажали именно на оверлей, а не глубже
                     $targetPopup.classList.remove('is-active');
                 }
             });
         }
     });
 
+    //Переключатель класса на кнопке (два варианта)
     const $toggleClass = document.querySelectorAll('.toggle-class');
     $toggleClass.forEach($targetItem => {
         if (!$targetItem.dataset.target) {
@@ -43,6 +45,8 @@ window.onReady(() => {
         });
     });
 
+
+    //Переключатель класса на кнопке (много вариантов)
     const $toggleIcon = document.querySelectorAll('.toggle-icon');
     $toggleIcon.forEach($targetItem => {
         if (!$targetItem.dataset.target) {

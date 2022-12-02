@@ -7,16 +7,18 @@
 async function download(link) {
     console.groupCollapsed(`download: ${link}`);
     console.time();
+    
     link = new URL(link);
     console.debug(link);
-    let tpl = /<title>(.*?)<\/title>/;
-    if (link.protocol !== 'https:') console.warn(`link is not secure!`);
+    if (link.protocol !== 'https:') console.warn(`download: link is not secure!`);
+
     const response = await fetch(link, { mode: 'no-cors', redirect: 'follow' });
-    console.info(`response: ${response.status} ${response.statusText}`);
+    console.info(`download: response ${response.status} ${response.statusText}`);
     console.debug(response);
     console.table(parseIterator(response.headers.entries(), ['content-type', 'content-length', 'last-modified', 'expires']));
+    
     if (response.redirected) {
-        console.warn(`response was redirected`);
+        console.warn(`download: response was redirected`);
     }
     if (!response.ok || response.headers.get('Content-Type').indexOf('text/html') === -1) {
 	console.debug(response.ok, response.headers.get('Content-Type'))
@@ -26,7 +28,9 @@ async function download(link) {
     }
 
     let text = await response.text();
-    console.info(`loaded text length: ${text.length}`);
+    console.info(`download: loaded text length: ${text.length}`);
+
+    let tpl = /<title>(.*?)<\/title>/;
     let title = text.match(tpl)[1];
 
     console.timeEnd();

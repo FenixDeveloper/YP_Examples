@@ -8,7 +8,7 @@
     });
 
     document.addEventListener('readystatechange', function () {
-        console.debug(`document.readyState = ${document.readyState}`);
+        console.debug(`event: document.readyState = ${document.readyState}`);
     });
 
     window.onReady = function (callback) {
