@@ -5,11 +5,22 @@ const DEFAULT_TEMPLATE = `
     <tbody></tbody>
 `;
 
-const DEFAULT_SETTINGS = {
+export const DEFAULT_SETTINGS = {
     tableClass: 'table'
 };
 
+export const columnTypes = {    
+    "link:cell": ({cell, row, key}) => {
+        cell.append(createLink(row[key]));
+    }
+};
+
+function log(...msg) {
+    console.log('table-fn: ', ...msg);
+}
+
 function createContainer({ tableClass }) {
+    log('createContainer');
     const table = document.createElement('table');
     table.innerHTML = DEFAULT_TEMPLATE;
     const head = table.querySelector('thead > tr');
@@ -19,8 +30,12 @@ function createContainer({ tableClass }) {
 }
 
 function createHeader({ header, ...column }) {
+    log('createHeader');
     const headElement = document.createElement('th');
-    if (header) {
+    const key = `${column.type}:header`;
+    if (column.type && columnTypes[key]) {
+        columnTypes[key]({ head: headElement, ...column });
+    } else if (header) {
         header({ head: headElement, ...column });
     } else {
         headElement.textContent = column.label;
@@ -29,8 +44,12 @@ function createHeader({ header, ...column }) {
 }
 
 function createCell(row, { cell, ...column}) {
+    log('createCell');
     const cellElement = document.createElement('td');
-    if (cell) {
+    const key = `${column.type}:cell`;
+    if (column.type && columnTypes[key]) {
+        columnTypes[key]({ cell: cellElement, row, ...column });
+    } else if (cell) {
         cell({ cell: cellElement, row, ...column });
     } else {
         cellElement.textContent = row[column.key];
@@ -39,6 +58,7 @@ function createCell(row, { cell, ...column}) {
 }
 
 function createRow(row, columns, cellRenderer) {
+    log('createRow');
     const rowElement = document.createElement('tr');
     for (let column of columns) {
         rowElement.append(cellRenderer(row, column));
@@ -46,17 +66,28 @@ function createRow(row, columns, cellRenderer) {
     return rowElement;
 }
 
-export function createTable(rows, { columns = [], ...customSettings }) {
+const DEFAULT_CREATORS = {
+    container: createContainer,
+    header: createHeader,
+    row: createRow,
+    cell: createCell
+};
+
+/*
+    через третий аргумент можно передать кастомные рендер функции, чтобы переопределить детали реализации как в ООП варианте
+*/
+export function createTable(rows, { columns = [], ...customSettings }, customCreators = {}) {
     const settings = Object.assign({}, DEFAULT_SETTINGS, customSettings ?? {});
+    const { container, header, row, cell } = Object.assign({}, DEFAULT_CREATORS, customCreators);
 
-    const { table, head, body } = createContainer(settings);
+    const { table, head, body } = container(settings);
 
-    for (let column of columns) {
-        head.append(createHeader(column));
+    for (let columnItem of columns) {
+        head.append(header(columnItem));
     }
 
-    for (let row of rows) {
-        body.append(createRow(row, columns, createCell));
+    for (let rowItem of rows) {
+        body.append(row(rowItem, columns, cell));
     }
 
     return { table };
