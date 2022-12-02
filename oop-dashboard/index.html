@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webpack App</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="section todo">
+        <form name="todo-form" class="todo__form">
+          <div class="field is-grouped">
+            <div class="control is-expanded">
+              <input class="input" type="text" name="text" placeholder="Что нужно сделать" />
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-info">Добавить</button>
+            </div>
+          </div>
+        </form>
+        <ul class="todo__list"></ul>
+      </section>
+    </main>
+
+    <template id="todo-item">
+      <li class="box todo__item">
+        <p class="todo__label"></p>
+        <button class="button todo__check">
+            <span class="icon is-small">
+              <i class="fas fa-check"></i>
+            </span>
+        </button>
+        <button class="button is-danger todo__delete">
+            <span class="icon is-small">
+              <i class="fas fa-trash"></i>
+            </span>
+        </button>
+      </li>
+    </template>
+  </body>
+</html>

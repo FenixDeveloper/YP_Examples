@@ -1,0 +1,9 @@
+$family-sans-serif: Roboto, Helvetica, Arial, sans-serif;
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+//$primary: #6A1B9A;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+@import "~bulma/bulma";
+
