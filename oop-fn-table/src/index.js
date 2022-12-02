@@ -1,7 +1,7 @@
 ﻿import "@fontsource/roboto";
 import "./index.scss";
 
-import { createTable } from "./components/table.fn";
+import { createTable, createLink } from "./components/table.fn";
 import {Table} from "./components/Table.oop";
 
 const DATA = [
@@ -36,22 +36,39 @@ const DATA = [
         "address": "Ap #164-5862 Tempor St."
     }
 ];
-const settings = {
-    columns: [
-        { label: 'Имя', key: 'name' },
-        { label: 'Телефон', key: 'phone' },
-        { label: 'Email', key: 'email' },
-        { label: 'Адрес', key: 'address' }
-    ],
-    tableClass: 'table is-bordered is-fullwidth custom-table'
-};
 
 const fnRoot = document.getElementById('fn-table');
 const oopRoot = document.getElementById('oop-table');
 
-const { table: fnTable } = createTable(DATA, settings);
+const { table: fnTable } = createTable(DATA, {
+    columns: [
+        { label: 'Имя', key: 'name' },
+        { label: 'Телефон', key: 'phone' },
+        { label: 'Email', key: 'email', cell: function ({cell, row, key}) {
+            cell.append(createLink(
+                `mailto:${row[key]}`,
+                row[key]
+            ));
+        }},
+        { label: 'Адрес', key: 'address' }
+    ],
+    tableClass: 'table is-bordered is-fullwidth custom-table'
+});
 fnRoot.append(fnTable);
 
-const oopTable = new Table(DATA, settings);
+const oopTable = new Table(DATA, {
+    columns: [
+        { label: 'Имя', key: 'name' },
+        { label: 'Телефон', key: 'phone' },
+        { label: 'Email', key: 'email', cell: function ({cell, row}) {
+            cell.append(this._link(
+                `mailto:${row[this.key]}`,
+                row[this.key]
+            ));
+        }},
+        { label: 'Адрес', key: 'address' }
+    ],
+    tableClass: 'table is-bordered is-fullwidth custom-table'
+});
 oopRoot.append(oopTable.render());
 
