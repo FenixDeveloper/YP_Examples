@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+}
+
+.trigger {
+
+}
+
+.panel {
+    border: 1px solid black;
+    padding: 1rem;
+    position: absolute;
+    display: none;
+}
+
+.panel_title {
+    margin: 0;
+}
+
+.panel_body {
+
+}
+
+.active .panel {
+    display: block;
+}

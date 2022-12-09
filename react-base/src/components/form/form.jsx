@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput } from './text-input';
+import {EmailInput, TextInput} from './text-input';
 import PropTypes from 'prop-types';
 import styles from "./form.module.css";
 
@@ -9,6 +9,11 @@ function getDefaultValues(fields) {
     }), {})
 }
 
+const FIELD_TYPES = {
+    default: TextInput,
+    email: EmailInput
+};
+
 export function Form({name, fields}) {
     const [data, setData] = useState(getDefaultValues(fields));
 
@@ -17,13 +22,17 @@ export function Form({name, fields}) {
     };
 
     return <form name={name} className={styles.form}>
-        {Object.keys(fields).map(fieldName => <TextInput 
-            {...fields[fieldName]}
-            key={`${name}_${fieldName}`}
-            name={fieldName}
-            value={data[fieldName]}
-            onChange={onChange(fieldName)}
-        />)}
+        {Object.keys(fields).map(fieldName => {
+            const {type, ...fieldProps} = fields[fieldName];
+            const Field = FIELD_TYPES[type ?? 'default'];
+            return <Field
+                {...fieldProps}
+                key={`${name}_${fieldName}`}
+                name={fieldName}
+                value={data[fieldName]}
+                onChange={onChange(fieldName)}
+            />
+        })}
     </form>
 }
 

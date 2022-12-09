@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import styles from './form.module.css';
 import clsx from 'clsx';
+import {withFieldType} from "./field";
 
-export function TextInput({name, label, type = 'text', value, onChange, className, ...props}) {
-    return <label className={styles.field}>
-        {label ? <span className={styles.label}>{label}</span> : null}
-        <input
-            {...props}
-            className={clsx(styles.input, className)}
-            name={name}
-            type={type}
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-        />
-    </label>
+function Text({name, value, onChange, className, ...props}) {
+    return <input
+        {...props}
+        className={clsx(styles.input, className)}
+        name={name}
+        type="text"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+    />
 }
 
-TextInput.propTypes = {
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
-};
+function Email({name, value, onChange, className, ...props}) {
+    return <input
+        {...props}
+        className={clsx(styles.input, className)}
+        name={name}
+        type="email"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+    />
+}
+
+export const TextInput = withFieldType(Text);
+export const EmailInput = withFieldType(Email);
+

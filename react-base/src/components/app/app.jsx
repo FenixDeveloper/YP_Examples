@@ -1,60 +1,39 @@
-import React, { useState } from 'react';
-import styles from './app.module.css';
+import React from 'react';
 
-import { Form } from '../form';
-
-class ButtonsGroup extends React.Component {
-    render() {
-        return <div className="buttons">
-            {this.props.children}
-        </div>
-    }
-}
-
-function Button({label, ...props}) {
-    return <button {...props}>{label}</button>
-}
-
-function Input({label}) {
-    return <label>
-        <span>{label}</span>
-        <input />
-    </label>
-}
-
-function ControlledInput({label}) {
-    const [value, setValue] = useState("");
-
-    return <label>
-        <span>{label}</span>
-        <input
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-        />
-    </label>
-}
+import {Form} from '../form';
+import {Layout} from "./layout";
+import {Button, ButtonsGroup, ControlledInput, Input} from "./examples";
+import {Dropdown} from "../dropdown/dropdown";
 
 function App() {
-    return <main className={styles.app}>
-        <section className={styles.section}>
+    return <Layout
+        header={<h1>React base examples</h1>}
+    >
+        <section>
             <ButtonsGroup>
                 <Button label="CLICK ME!" onClick={() => alert('Hello world!')} />
             </ButtonsGroup>
         </section>
 
-        <section className={styles.section}>
-            <Input label="Uncontrolled Input" />
-            <ControlledInput label="Controlled Input" />
+        <section>
+            <Input label="Input" />
+            <ControlledInput label="Controlled input" />
         </section>
         
-        <section className={styles.section}>
+        <section>
             <Form name="test" fields={{
                 name: { value: '', label: 'Имя' },
-                email: { value: '', label: 'Email' },
+                email: { value: '', label: 'Email', type: 'email' },
                 address: { value: '', label: 'Адрес' }
             }} />
         </section>
-    </main>
+
+        <section>
+            <Dropdown label="dropdown panel" title="hidden content">
+                HELLO WORLD!
+            </Dropdown>
+        </section>
+    </Layout>
 }
 
 export default App;
