@@ -1,0 +1,32 @@
+.table {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-spacing: 0;
+}
+
+.thead {
+    background-color: #37474F;
+    color: white;
+}
+
+.tbody {
+
+}
+
+.row {
+
+}
+
+.column {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 0.25rem 0.5rem;
+}
+
+.thead .column {
+    text-align: left;
+}
+
+.nestedRow {
+    background-color: #CFD8DC;
+}

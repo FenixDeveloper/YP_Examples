@@ -1,0 +1,24 @@
+.container {
+
+}
+
+.nav {
+    display: flex;
+    gap: 0.25rem;
+    border-bottom: 1px solid gray;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    border: 1px solid gray;
+    padding: 0.25rem 1rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin: -1px;
+}
+
+.active {
+    background: white;
+    border-bottom-color: white;
+}
