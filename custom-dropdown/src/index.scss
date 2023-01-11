@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
+
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+html, body, #root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  padding: 4rem;
+}
+
+.example {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .example-section {
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+  }
+}

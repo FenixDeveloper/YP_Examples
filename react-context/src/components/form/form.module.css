@@ -1,0 +1,24 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-weight: 500;
+}
+
+.label:after {
+    content: ':';
+}
+
+.input {
+    border: 1px solid gray;
+    padding: 0.5rem 1rem;
+}

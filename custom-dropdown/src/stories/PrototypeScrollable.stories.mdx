@@ -1,0 +1,43 @@
+import {Meta} from '@storybook/addon-docs';
+import {DropdownExample} from "./DropdownExample"; import {DropdownSync} from "../components";
+
+<Meta title="Components/ExampleScrollable"/>
+
+<style>
+{`
+  html {
+    overflow: auto;
+  }
+  body {
+    width: 2000px;
+    height: 2000px;
+    background-color: hsl(0, 0%, 96%);
+  }
+  .sbdocs {
+    background: transparent;
+    width: 80vw;
+    height: 80vh;
+  }
+  #docs-root {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`}
+</style>
+
+<DropdownSync>
+  <div className="example">
+    <div className="example-section">
+      <DropdownExample/>
+      <DropdownExample/>
+    </div>
+    <div className="example-section">
+      <DropdownExample/>
+      <DropdownExample/>
+    </div>
+  </div>
+</DropdownSync>
+
+
