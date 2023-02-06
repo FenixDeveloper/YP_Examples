@@ -1,0 +1,53 @@
+.container {
+    --border: 1px;
+    --cols: 10;
+    --rows: 40;
+    border: var(--border) solid gray;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 25px 1fr;
+    grid-gap: var(--border);
+    grid-template-areas:
+    ". cols"
+    "rows cells";
+    background-color: gray;
+}
+
+.table {
+    grid-area: cells;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
+    gap: var(--border);
+}
+
+.cols {
+    grid-area: cols;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    grid-template-rows: 1fr;
+}
+
+.rows {
+    grid-area: rows;
+    display: grid;
+    gap: 1px;
+    grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
+    grid-template-columns: 1fr;
+}
+
+.head {
+    padding: 0 .25rem;
+    background: #eee;
+}
+
+.cell {
+    box-sizing: border-box;
+    background: white;
+    padding: 0 .25rem;
+    border: 0;
+    border-radius: 0;
+}

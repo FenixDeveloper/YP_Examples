@@ -1,0 +1,10 @@
+html, body, #root {
+    height: 100%;
+}
+
+.wrapper {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    margin: 10vh auto 0;
+}

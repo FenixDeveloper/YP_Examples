@@ -1,0 +1,24 @@
+.table {
+    border: 1px solid gray;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.head {
+    background: #eee;
+    padding: 0.5rem 1rem;
+}
+
+.cell, .head {
+    border: 1px solid gray;
+    text-align: left;
+}
+
+.drag {
+
+}
+
+.value {
+    border: 0;
+    padding: 0.25rem 1rem;
+}

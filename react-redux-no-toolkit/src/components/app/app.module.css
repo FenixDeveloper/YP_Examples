@@ -1,0 +1,10 @@
+.app {
+    padding: 4rem 4rem;
+    margin: 0;
+}
+
+.section {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
