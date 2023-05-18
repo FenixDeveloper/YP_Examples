@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+.hero__button {
+	font-size: $actionFontSize;
+	color: $actionFontColor;
+	border: 1px solid darken($actionColor, 5%); //делаем цвет темнее
+	background-color: $actionColor;
+	transition: background-color 0.3s ease-in-out; /*gulp добавит нам префиксы, поэтому вручную не потребуется*/
+	text-transform: uppercase;
+	padding: (0.25 * $actionFontSize) (0.5 * $actionFontSize); /* скобки чисто для визуальной наглядности */
+
+	&:hover {
+		background-color: $activeActionColor;
+	}
+}
