@@ -1,0 +1,23 @@
+.slider {
+    --slides: 1;
+    --current: 1;
+    max-width: 80%;
+    margin: auto;
+    border: 1px solid gray;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__container {
+    display: grid;
+    width: calc(var(--slides) * 100%);
+    grid-template-columns: repeat(var(--slides), 1fr);
+    transition: margin-left .3s ease-in-out;
+    margin-left: calc((var(--current) - 1) * -100%);
+}
+
+.slider__actions {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

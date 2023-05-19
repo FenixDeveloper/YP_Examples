@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Slider Example</h1>
+
+    <section class="slider" style="--slides: 5; --current: 1">
+        <div class="slider__container">
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 1</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=A" alt="slide image 1" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 2</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=B" alt="slide image 2" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 3</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=C" alt="slide image 3" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 4</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=D" alt="slide image 4" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 5</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=E" alt="slide image 5" />
+            </article>
+        </div>
+        <div class="slider__actions">
+            <button type="button" name="left" class="slider__button"><</button>
+            <button type="button" name="right" class="slider__button">></button>
+        </div>
+    </section>
+
+    <section class="slider slider_for-ever" style="--slides: 5; --current: 1">
+        <div class="slider__container">
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 1</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=A" alt="slide image 1" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 2</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=B" alt="slide image 2" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 3</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=C" alt="slide image 3" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 4</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=D" alt="slide image 4" />
+            </article>
+            <article class="slider__item hero">
+                <h2 class="hero__title">Slide title 5</h2>
+                <p class="hero__subtitle">Subtitle</p>
+                <img src="https://placehold.co/300x200?text=E" alt="slide image 5" />
+            </article>
+        </div>
+        <div class="slider__actions">
+            <button type="button" name="left" class="slider__button"><</button>
+            <button type="button" name="right" class="slider__button">></button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        const $sliders = document.querySelectorAll('.slider');
+        const sliders = [...$sliders].map($slider => {
+            return new Slider($slider, $slider.className.includes('slider_for-ever') ? [
+                Slider.actionLeftForEver($slider.querySelector('.slider__button[name=left]')),
+                Slider.actionRightForEver($slider.querySelector('.slider__button[name=right]'))
+            ] : [
+                Slider.actionLeft($slider.querySelector('.slider__button[name=left]')),
+                Slider.actionRight($slider.querySelector('.slider__button[name=right]'))
+            ]);    
+        });
+    </script>
+</body>
+</html>
